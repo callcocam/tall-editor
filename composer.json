@@ -1,0 +1,27 @@
+{
+    "name": "callcocam/tall-editor",
+    "type": "package",
+    "description": "The packages editor.",
+    "keywords": ["framework", "laravel", "livewire", "alpinejs", "tailwindcss"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "livewire/livewire": "^2.5",
+        "wireui/wireui": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tall\\Editor\\": "src"
+        }
+    },
+    
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tall\\Editor\\TallEditorServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
