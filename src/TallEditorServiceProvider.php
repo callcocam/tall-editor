@@ -26,18 +26,18 @@ class TallEditorServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/editor.php', 'editor');
-        $this->publishes([__DIR__ . '/../config/editor.php' => config_path('editor.php')], 'tall-editor');
+        $this->publishes([__DIR__ . '/../config/editor.php' => config_path('editor.php')], 'editor');
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
-        $this->publishes([__DIR__ . '/../database/migrations' => database_path('migrations')], 'tall-editor-migrations');
-        $this->publishes([__DIR__ . '/../public/editor' => public_path('js/vendor/editor')], 'tall-editor-assets');
+        $this->publishes([__DIR__ . '/../database/migrations' => database_path('migrations')], 'editor-migrations');
+        $this->publishes([__DIR__ . '/../public/editor' => public_path('js/vendor/editor')], 'editor-assets');
 
         if (config('editor.use_package_routes')) {
             if (class_exists(Livewire::class)) {
                
-                Livewire::component( 'tall-editor::posts.create-component', \Tall\Editor\Http\Livewire\Admin\Posts\CreateComponent::class);
-                Livewire::component( 'tall-editor::posts.edit-component', \Tall\Editor\Http\Livewire\Admin\Posts\EditComponent::class);
-                Livewire::component( 'tall-editor::posts.list-component', \Tall\Editor\Http\Livewire\Admin\Posts\ListComponent::class);
-                Livewire::component( 'tall-editor::posts.show-component', \Tall\Editor\Http\Livewire\Admin\Posts\ShowComponent::class);
+                Livewire::component( 'editor::posts.create-component', \Tall\Editor\Http\Livewire\Admin\Posts\CreateComponent::class);
+                Livewire::component( 'editor::posts.edit-component', \Tall\Editor\Http\Livewire\Admin\Posts\EditComponent::class);
+                Livewire::component( 'editor::posts.list-component', \Tall\Editor\Http\Livewire\Admin\Posts\ListComponent::class);
+                Livewire::component( 'editor::posts.show-component', \Tall\Editor\Http\Livewire\Admin\Posts\ShowComponent::class);
               
                 $this->app->register(RouteServiceProvider::class);     
             }

@@ -80,6 +80,7 @@ final class ListComponent extends TableComponent
     protected function actions(){
 
         return [
+            Link::make('Show')->route(config("editor.routes.editors.show"))->xs()->icon('pencil-alt')->positive(),
             Link::make('Edit')->route(config("editor.routes.editors.edit"))->xs()->icon('pencil-alt')->primary(),
             Delete::make('Delete')->xs()->icon('trash')->negative(),
         ];

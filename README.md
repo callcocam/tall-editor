@@ -3,9 +3,9 @@
 #PUBLICAR AS MIGRATIONS, CONFIG E ASSETS
 
 ```
-... artisan vendor:publish --tag=tall-editor-migrations --force
-... artisan vendor:publish --tag=tall-editor --force
-... artisan vendor:publish --tag=tall-editor-assets --force
+... artisan vendor:publish --tag=editor-migrations --force
+... artisan vendor:publish --tag=editor --force
+... artisan vendor:publish --tag=editor-assets --force
 
 ```
 #CARREGAR OS ASSETS

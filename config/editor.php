@@ -37,7 +37,7 @@ return [
                 'show'=>'tall-acl.admin.editor.show',
                 'api'=>[
                     'uploads'=>[
-                        'images'=>'tall-editor.api.uploads.images'
+                        'images'=>'editor.api.uploads.images'
                     ]
                 ]
             ]
